@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1ab4f1a60e2ea6339c097b90b1cfbbb38a69a037">
+        <dex dex="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_56c4dea4b5c4e778d564fbc6cfd08befc4e8dbca\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\hayrow\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.0_ef65bba9b31c61d71affd19556bcc81517d8a538\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.0.1_e2ad49612e2ac6e42f96a4f1a282e0f5634ee966\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.0_ae49c9cc81d7919809fa62350a977a84d90a82c0\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\exploded-aar\com.github.devlight.navigationtabstrip\navigationtabstrip\1.0.4\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="6ee92f191bc56ff6479ca27a042e8b8d28b7c809">
+        <dex dex="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.devlight.navigationtabstrip-navigationtabstrip-1.0.4_614cc722ad8276c4329bcdd33bcd2beba32c2593\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\exploded-aar\com.github.stankoutils\app\1.3.10\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d5bc5903906300dd650f6856cb2d851c270e2f70">
+        <dex dex="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.stankoutils-app-1.3.10_06d4e36b2763ed3e156ecf0c370c7930d28b878a\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.0_10e5318e7416bd5d225224f2c7ce219506680aff\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\hayrow\.gradle\caches\modules-2\files-2.1\org.jsoup\jsoup\1.8.1\1eb6690b0c629d7000c77a72df5e822fb974f521\jsoup-1.8.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1eb6690b0c629d7000c77a72df5e822fb974f521">
+        <dex dex="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\transforms\dex\debug\folders\1000\10\jsoup-1.8.1_3ff854a61431bf54d81b409bcd1dce1aa65ce704\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\hayrow\.gradle\caches\modules-2\files-2.1\org.greenrobot\eventbus\3.0.0\ddd99896e9569eaababbe81b35d80e1b91c4ad85\eventbus-3.0.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\transforms\dex\debug\folders\1000\10\eventbus-3.0.0_27690862831242bf3a5baa32e14b7306b59c78ad\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.0_7562748b9e7ee2137ffeff25ecde8126e30ad7eb\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ac65c3995e141e02101a56a66dc5f985f4bc625c">
+        <dex dex="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_510495edae12966deb0859ea043762dbd53ecf31\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\hayrow\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\transforms\dex\debug\folders\1000\10\glide-3.7.0_842d0f5bc95d8ec9214700189c1a300fc462e0c3\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\hayrow\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations-java5\15.0\7011b4551a8451906759b05814c58b9eb829ea9b\annotations-java5-15.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="7011b4551a8451906759b05814c58b9eb829ea9b">
+        <dex dex="C:\Users\hayrow\Desktop\Diary\app\build\intermediates\transforms\dex\debug\folders\1000\10\annotations-java5-15.0_8f8dc4fdc9566b0a3c5f3952cb7047cc3b37e155\classes.dex" />
+    </item>
+
+</items>
