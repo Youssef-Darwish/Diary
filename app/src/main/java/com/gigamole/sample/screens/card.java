@@ -1,6 +1,7 @@
 package com.gigamole.sample.screens;
 
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -16,6 +17,10 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.gigamole.sample.R;
+
+import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 
 public class card extends AppCompatActivity {
 
@@ -49,25 +54,25 @@ public class card extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         super.onActivityResult(requestCode, resultCode, data);
-
+        Bitmap bitmap;
         switch(requestCode) {
             case 1234:
                 if(resultCode == RESULT_OK){
                     Uri selectedImage = data.getData();
-                    String[] filePathColumn = {MediaStore.Images.Media.DATA};
 
-                    Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
-                    cursor.moveToFirst();
+                    try {
+                        ContentResolver cr = getBaseContext().getContentResolver();
+                        InputStream inputStream = cr.openInputStream(selectedImage);
+                        bitmap = BitmapFactory.decodeStream(inputStream);
+                        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                        //   bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+                       // data = baos.toByteArray();
+                        ImageView img = (ImageView) findViewById(R.id.img);
+                        img.setImageBitmap(bitmap);
 
-                    int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-                    String filePath = cursor.getString(columnIndex);
-                    cursor.close();
-
-
-                    Bitmap yourSelectedImage = BitmapFactory.decodeFile(filePath);
-                    /* Now you have choosen image in Bitmap format in object "yourSelectedImage". You can use it in way you want! */
-                    ImageView img = (ImageView) findViewById(R.id.img);
-                    img.setImageBitmap(yourSelectedImage);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }/* Now you have choosen image in Bitmap format in object "yourSelectedImage". You can use it in way you want! */
 
                 }
         }
