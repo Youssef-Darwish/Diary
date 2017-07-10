@@ -1,5 +1,6 @@
 package com.gigamole.infinitecycleviewpager;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -28,6 +29,7 @@ import static com.gigamole.infinitecycleviewpager.InfiniteCyclePagerAdapter.OnNo
  * Created by GIGAMOLE on 7/27/16.
  */
 @SuppressWarnings("unused")
+@TargetApi(Build.VERSION_CODES.M)
 class InfiniteCycleManager implements OnNotifyDataSetChangedListener {
 
     // InfiniteCycleManager constants
@@ -321,6 +323,8 @@ class InfiniteCycleManager implements OnNotifyDataSetChangedListener {
     }
 
     // We are disable multitouch on ViewPager and settling scroll, also we disable outside drag
+
+
     public boolean onTouchEvent(final MotionEvent event) {
         if (mViewPageable.getAdapter() == null || mViewPageable.getAdapter().getCount() == 0)
             return false;
@@ -394,6 +398,7 @@ class InfiniteCycleManager implements OnNotifyDataSetChangedListener {
     }
 
     // Enable hardware layer when transform pages
+    @TargetApi(Build.VERSION_CODES.M)
     private void enableHardwareLayer(final View v) {
         final int layerType = Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT ?
                 View.LAYER_TYPE_NONE : View.LAYER_TYPE_HARDWARE;
@@ -429,6 +434,7 @@ class InfiniteCycleManager implements OnNotifyDataSetChangedListener {
     }
 
     // Reset scroller to own
+    @TargetApi(Build.VERSION_CODES.M)
     private void resetScroller() {
         if (mViewPageable == null) return;
         try {

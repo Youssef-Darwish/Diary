@@ -2,123 +2,116 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\jars\libs\internal_impl-23.2.0.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="6e239441500605809818997dd63b62a947195f8c">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\internal_impl-23.2.0_116cc29fd48fe72175e020b514631ccebea35318.jar" />
-    </item>
-    <item
-        jar="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.2.0_60c2893f864abd883a3fe55b791d4fc88696176b.jar" />
-    </item>
-    <item
-        jar="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.0.1_4731dd59950ffc0cdaa2f5c1ebae496d70d2b43f.jar" />
-    </item>
-    <item
-        jar="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\exploded-aar\com.github.stankoutils\app\1.3.10\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="d5bc5903906300dd650f6856cb2d851c270e2f70">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\com.github.stankoutils-app-1.3.10_082deede67fe260c4c7c54cede174da8cf446b46.jar" />
-    </item>
-    <item
-        jar="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.2.0_9f4364ac01dab5416ce755584d88f4804b9cae9c.jar" />
-    </item>
-    <item
-        jar="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.2.0_22753dcea72f7327c620686c0b157926e6643d88.jar" />
-    </item>
-    <item
-        jar="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="292a9fa091757208efa65e77eef63088247e51f3">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.2.0_288442af2f7babbbe9e7cf30296c25dcaf48bf3e.jar" />
-    </item>
-    <item
-        jar="C:\Users\hayrow\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.2.0\support-annotations-23.2.0.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\support-annotations-23.2.0_0f7fad9111cfb2a12fe1d5f0a9189f8ad576062a.jar" />
-    </item>
-    <item
-        jar="C:\Users\hayrow\.gradle\caches\modules-2\files-2.1\org.jsoup\jsoup\1.8.1\1eb6690b0c629d7000c77a72df5e822fb974f521\jsoup-1.8.1.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="1eb6690b0c629d7000c77a72df5e822fb974f521">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\jsoup-1.8.1_3ff854a61431bf54d81b409bcd1dce1aa65ce704.jar" />
-    </item>
-    <item
-        jar="C:\Users\hayrow\.gradle\caches\modules-2\files-2.1\org.greenrobot\eventbus\3.0.0\ddd99896e9569eaababbe81b35d80e1b91c4ad85\eventbus-3.0.0.jar"
-        jumboMode="true"
+        jar="/home/youssef/.gradle/caches/modules-2/files-2.1/org.greenrobot/eventbus/3.0.0/ddd99896e9569eaababbe81b35d80e1b91c4ad85/eventbus-3.0.0.jar"
+        jumboMode="false"
         revision="23.0.3"
         sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\eventbus-3.0.0_27690862831242bf3a5baa32e14b7306b59c78ad.jar" />
+        <dex dex="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/pre-dexed/debug/eventbus-3.0.0_5e042ef0410fc5550dd9effe47edc3f2ff951f2d.jar" />
     </item>
     <item
-        jar="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\exploded-aar\com.android.support\design\23.2.0\jars\classes.jar"
-        jumboMode="true"
+        jar="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/classes.jar"
+        jumboMode="false"
         revision="23.0.3"
-        sha1="1aa5b025efe97f5006f5be16d6ca67c6c3c0c0d8">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.2.0_b512a81b75658fd73522085cdf4d523015666426.jar" />
+        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
+        <dex dex="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.0_86a32d58231a1205603047d8cf206f5e204fa60a.jar" />
     </item>
     <item
-        jar="C:\Users\hayrow\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\glide-3.7.0_842d0f5bc95d8ec9214700189c1a300fc462e0c3.jar" />
-    </item>
-    <item
-        jar="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\exploded-aar\com.github.devlight.navigationtabstrip\navigationtabstrip\1.0.4\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="6ee92f191bc56ff6479ca27a042e8b8d28b7c809">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\com.github.devlight.navigationtabstrip-navigationtabstrip-1.0.4_179c0645f23d28721a1744a131c0895f723e9139.jar" />
-    </item>
-    <item
-        jar="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="6e4d3faf3feca22fd1dfc9cc433721525d0dd397">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\instant-run_96d60494cf3a01971ec7c4a6b937f7a4371e61d6.jar" />
-    </item>
-    <item
-        jar="C:\Users\hayrow\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations-java5\15.0\7011b4551a8451906759b05814c58b9eb829ea9b\annotations-java5-15.0.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="7011b4551a8451906759b05814c58b9eb829ea9b">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\annotations-java5-15.0_8f8dc4fdc9566b0a3c5f3952cb7047cc3b37e155.jar" />
-    </item>
-    <item
-        jar="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="9601ebdf08bf50a81f4d202eed24fed7c3764f63">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_b351566ff6086680eb674be2470c0eb854c145ff.jar" />
-    </item>
-    <item
-        jar="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\jars\classes.jar"
-        jumboMode="true"
+        jar="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/jars/classes.jar"
+        jumboMode="false"
         revision="23.0.3"
         sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
-        <dex dex="C:\Users\hayrow\Desktop\Diary1\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.2.0_d9756dee3c1d79f165a11a47a6cb48df28003a0f.jar" />
+        <dex dex="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.0_19ec5cff2a313374f52b4193d3ed1981928526a4.jar" />
+    </item>
+    <item
+        jar="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/libs/internal_impl-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="6e239441500605809818997dd63b62a947195f8c">
+        <dex dex="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.0_accdefcbb83df4299cb903663e48fb274c7e8bf2.jar" />
+    </item>
+    <item
+        jar="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="292a9fa091757208efa65e77eef63088247e51f3">
+        <dex dex="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.0_3925ee6728ec6b59cc6e036d3e2a85ff5a299927.jar" />
+    </item>
+    <item
+        jar="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
+        <dex dex="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.0_00a482509cc089978803699c31bcdbab46096d91.jar" />
+    </item>
+    <item
+        jar="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/exploded-aar/com.github.devlight/infinitecycleviewpager/1.0.2/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d1f7d3dcfb4f04f1e95b24559a75e4c64d9226ad">
+        <dex dex="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/pre-dexed/debug/com.github.devlight-infinitecycleviewpager-1.0.2_2cbc57e5b24fdcc0a54a4b6aa02adb85c483e908.jar" />
+    </item>
+    <item
+        jar="/home/youssef/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.8.1/1eb6690b0c629d7000c77a72df5e822fb974f521/jsoup-1.8.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="1eb6690b0c629d7000c77a72df5e822fb974f521">
+        <dex dex="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/pre-dexed/debug/jsoup-1.8.1_f80345948f78207065cf7650c4e82f9b04cfce77.jar" />
+    </item>
+    <item
+        jar="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.0.1_4f98b8111327c0099b373dcc6d6693f4214d2dfe.jar" />
+    </item>
+    <item
+        jar="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="1aa5b025efe97f5006f5be16d6ca67c6c3c0c0d8">
+        <dex dex="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.0_5ea100c65bb663d8d5595552bce0f782187b5dee.jar" />
+    </item>
+    <item
+        jar="/home/youssef/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations-java5/15.0/7011b4551a8451906759b05814c58b9eb829ea9b/annotations-java5-15.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="7011b4551a8451906759b05814c58b9eb829ea9b">
+        <dex dex="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/pre-dexed/debug/annotations-java5-15.0_832f13cf9a0dbdef0e34d4f9a745f44479ae01b4.jar" />
+    </item>
+    <item
+        jar="/home/youssef/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.0/support-annotations-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
+        <dex dex="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.0_59508686b091af26e8b14b95e8b44608db0005fb.jar" />
+    </item>
+    <item
+        jar="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/exploded-aar/com.github.stankoutils/app/1.3.10/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d5bc5903906300dd650f6856cb2d851c270e2f70">
+        <dex dex="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/pre-dexed/debug/com.github.stankoutils-app-1.3.10_d867fded411e859f9bf6343510992b134df38188.jar" />
+    </item>
+    <item
+        jar="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
+        <dex dex="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.0_106fc385684c8473530fb3b21b499f3690492761.jar" />
+    </item>
+    <item
+        jar="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/exploded-aar/com.github.devlight.navigationtabstrip/navigationtabstrip/1.0.4/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="6ee92f191bc56ff6479ca27a042e8b8d28b7c809">
+        <dex dex="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/pre-dexed/debug/com.github.devlight.navigationtabstrip-navigationtabstrip-1.0.4_d66c888d541b36a31727bab6cd53c3146df2e61c.jar" />
+    </item>
+    <item
+        jar="/home/youssef/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/home/youssef/AndroidStudioProjects/Diary/app/build/intermediates/pre-dexed/debug/glide-3.7.0_d1c5c085e5272b392c1f2b50762df1ea9c844dd1.jar" />
     </item>
 
 </items>
