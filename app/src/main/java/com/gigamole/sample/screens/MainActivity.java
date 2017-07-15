@@ -1,18 +1,18 @@
 package com.gigamole.sample.screens;
 
-import android.annotation.TargetApi;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.gigamole.navigationtabstrip.NavigationTabStrip;
 import com.gigamole.sample.R;
 import com.gigamole.sample.adapters.MainPagerAdapter;
-@TargetApi(Build.VERSION_CODES.M)
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -34,7 +34,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
 }
+    public void tryActivity(View view){
 
+        Toast.makeText(this,"blabla",Toast.LENGTH_LONG).show();
+        Log.d("editting", "entered");
+
+    }
 
 
 

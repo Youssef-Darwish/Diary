@@ -1,4 +1,4 @@
-package com.example.android.myapplication.data;
+package com.gigamole.sample.data;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,28 +6,26 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.android.myapplication.data.DiaryContract.DiaryEntry;
+import com.gigamole.sample.data.DiaryContract.DiaryEntry;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by youssef on 08/07/17.
- */
 
 public class DiaryDataSource {
 
     private SQLiteDatabase database;
     private DiaryDbHelper dbHelper;
 
-    private String [] allColumns = {DiaryEntry._ID,DiaryEntry.COLUMN_ENTRY_TITLE,
-            DiaryEntry.COLUMN_ENTRY_DESCRIPTION,DiaryEntry.COLUMMN_ENTRY_DATE
-            ,DiaryEntry.COLUMN_ENTRY_IMAGE};
+    private String[] allColumns = {DiaryEntry._ID, DiaryEntry.COLUMN_ENTRY_TITLE,
+            DiaryEntry.COLUMN_ENTRY_DESCRIPTION, DiaryEntry.COLUMMN_ENTRY_DATE
+            , DiaryEntry.COLUMN_ENTRY_IMAGE};
+
     public DiaryDataSource (Context context) {
         dbHelper = new DiaryDbHelper(context);
     }
 
-    public void open() throws SQLException{
+    public void open() throws SQLException {
         database = dbHelper.getWritableDatabase();
 
     }
@@ -48,11 +46,11 @@ public class DiaryDataSource {
     public void deleteEntry(Entry EntryToBeDeleted){
         String title = EntryToBeDeleted.getEntryTitle();
         database.delete(DiaryEntry.TABLE_NAME
-                ,DiaryEntry.COLUMN_ENTRY_TITLE + " = " + title,null);
+                , DiaryEntry.COLUMN_ENTRY_TITLE + " = " + title,null);
 
     }
 
-    public void updateEntry(Entry oldEntry,Entry newEntry){
+    public void updateEntry(Entry oldEntry, Entry newEntry){
 
         ContentValues values = new ContentValues();
         values.put(DiaryEntry.COLUMN_ENTRY_TITLE,newEntry.getEntryTitle());
@@ -61,7 +59,7 @@ public class DiaryDataSource {
         values.put(DiaryEntry.COLUMN_ENTRY_IMAGE,newEntry.getEntryImage());
 
         database.update(DiaryEntry.TABLE_NAME,
-                values,DiaryEntry.COLUMN_ENTRY_TITLE + " = " +
+                values, DiaryEntry.COLUMN_ENTRY_TITLE + " = " +
                         oldEntry.getEntryTitle(),null);
 
 
@@ -72,7 +70,7 @@ public class DiaryDataSource {
     // select operations?
 
     public List<Entry> getAllEntries(){
-        List <Entry> entries = new ArrayList<Entry>();
+        List<Entry> entries = new ArrayList<Entry>();
         Cursor cursor = database.query(DiaryEntry.TABLE_NAME,allColumns,null,null,null,null,null);
         while (!cursor.isAfterLast()){
             Entry temp = cursorToEntry(cursor);

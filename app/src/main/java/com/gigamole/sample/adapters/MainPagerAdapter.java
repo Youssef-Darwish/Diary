@@ -5,14 +5,13 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.gigamole.sample.screens.HorizontalPagerFragment;
-//import com.gigamole.sample.screens.TwoWayPagerFragment;
 
 /**
  * Created by GIGAMOLE on 8/18/16.
  */
 public class MainPagerAdapter extends FragmentStatePagerAdapter {
 
-    private final static int COUNT = 3;
+    private final static int COUNT = 1;
 
     private final static int HORIZONTAL = 0;
 

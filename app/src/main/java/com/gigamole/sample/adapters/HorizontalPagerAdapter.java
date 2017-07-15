@@ -2,12 +2,15 @@ package com.gigamole.sample.adapters;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.gigamole.sample.R;
 import com.gigamole.sample.utils.Utils;
+
+import java.util.ArrayList;
 
 import static com.gigamole.sample.utils.Utils.setupItem;
 
@@ -16,38 +19,29 @@ import static com.gigamole.sample.utils.Utils.setupItem;
  */
 public class HorizontalPagerAdapter extends PagerAdapter {
 
-    private final Utils.LibraryObject[] LIBRARIES = new Utils.LibraryObject[]{
-            new Utils.LibraryObject(
-                    R.drawable.ic_strategy,
-                    "Strategy"
-            ),
-            new Utils.LibraryObject(
-                    R.drawable.ic_design,
-                    "Design"
-            ),
-            new Utils.LibraryObject(
-                    R.drawable.ic_development,
-                    "Development"
-            ),
-            new Utils.LibraryObject(
-                    R.drawable.ic_qa,
-                    "Quality Assurance"
-            )
-    };
+    private static HorizontalPagerAdapter pagerAdapter = null;
+    public final ArrayList<Utils.LibraryObject> LIBRARIES;
 
     private Context mContext;
     private LayoutInflater mLayoutInflater;
 
-    public HorizontalPagerAdapter(final Context context) {
+    private HorizontalPagerAdapter(final Context context) {
+        LIBRARIES = new ArrayList<>();
         mContext = context;
         mLayoutInflater = LayoutInflater.from(context);
 
     }
 
+    public static HorizontalPagerAdapter getInstance(final Context context) {
+        if(pagerAdapter == null) {
+            pagerAdapter= new HorizontalPagerAdapter(context);
+        }
+        return pagerAdapter;
+    }
+
     @Override
     public int getCount() {
-        return LIBRARIES.length;
-       // return 1;
+        return LIBRARIES.size();
     }
 
     @Override
@@ -60,7 +54,7 @@ public class HorizontalPagerAdapter extends PagerAdapter {
         final View view;
 
             view = mLayoutInflater.inflate(R.layout.item, container, false);
-            setupItem(view, LIBRARIES[position]);
+            setupItem(view, LIBRARIES.get(position));
 
 
         container.addView(view);

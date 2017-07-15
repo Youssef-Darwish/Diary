@@ -1,5 +1,8 @@
 package com.gigamole.sample.utils;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.media.Image;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,18 +18,24 @@ public class Utils {
         final TextView txt = (TextView) view.findViewById(R.id.txt_item);
         txt.setText(libraryObject.getTitle());
 
-//        final ImageView img = (ImageView) view.findViewById(R.id.img_item);
-//        img.setImageResource(libraryObject.getRes());
+        final ImageView img = (ImageView) view.findViewById(R.id.img_item);
+            img.setImageBitmap(libraryObject.getImage());
+
+        final TextView text = (TextView) view.findViewById(R.id.txt_date);
+        text.setText(libraryObject.getDate());
+
     }
 
     public static class LibraryObject {
 
         private String mTitle;
-        private int mRes;
+        private Bitmap mImage;
+        private String mDate;
 
-        public LibraryObject(final int res, final String title) {
-            mRes = res;
+        public LibraryObject(final String title, Bitmap Image, String Date) {
             mTitle = title;
+            mImage = Image;
+            mDate = Date;
         }
 
         public String getTitle() {
@@ -37,12 +46,20 @@ public class Utils {
             mTitle = title;
         }
 
-        public int getRes() {
-            return mRes;
+        public Bitmap getImage() {
+            return mImage;
         }
 
-        public void setRes(final int res) {
-            mRes = res;
+        public void setImage(final Bitmap image) {
+            mImage = image;
+        }
+
+        public String getDate() {
+            return mDate;
+        }
+
+        public void setDate(final String date) {
+            mDate = date;
         }
     }
 }

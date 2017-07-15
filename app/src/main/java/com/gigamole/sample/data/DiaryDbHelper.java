@@ -1,11 +1,11 @@
-package com.example.android.myapplication.data;
+package com.gigamole.sample.data;
 
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.android.myapplication.data.DiaryContract.DiaryEntry;
+import com.gigamole.sample.data.DiaryContract.DiaryEntry;
 
 /**
  * Created by youssef on 06/07/17.

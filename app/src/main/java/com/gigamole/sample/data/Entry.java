@@ -1,4 +1,4 @@
-package com.example.android.myapplication.data;
+package com.gigamole.sample.data;
 
 /**
  * Created by youssef on 07/07/17.
@@ -20,7 +20,7 @@ public class Entry {
         date = null;
         image = null;
     }
-    public Entry ( String title, String description,byte [] image ){
+    public Entry (String title, String description, byte [] image ){
 
         this.description = description;
         this.title = title;

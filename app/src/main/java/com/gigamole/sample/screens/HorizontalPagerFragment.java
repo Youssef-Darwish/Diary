@@ -28,7 +28,7 @@ public class HorizontalPagerFragment extends Fragment {
 
         final HorizontalInfiniteCycleViewPager horizontalInfiniteCycleViewPager =
                 (HorizontalInfiniteCycleViewPager) view.findViewById(R.id.hicvp);
-        horizontalInfiniteCycleViewPager.setAdapter(new HorizontalPagerAdapter(getContext()));
+        horizontalInfiniteCycleViewPager.setAdapter(HorizontalPagerAdapter.getInstance(getContext()));
 
 //        horizontalInfiniteCycleViewPager.setScrollDuration(400);
 //        horizontalInfiniteCycleViewPager.setPageDuration(1000);

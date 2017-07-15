@@ -1,4 +1,4 @@
-package com.example.android.myapplication.data;
+package com.gigamole.sample.data;
 
 import android.provider.BaseColumns;
 

@@ -1,8 +1,6 @@
 package com.gigamole.infinitecycleviewpager;
 
-import android.annotation.TargetApi;
 import android.content.Context;
-import android.os.Build;
 import android.view.animation.Interpolator;
 import android.widget.Scroller;
 
@@ -22,7 +20,7 @@ class InfiniteCycleScroller extends Scroller {
     public InfiniteCycleScroller(final Context context, final Interpolator interpolator) {
         super(context, interpolator);
     }
-    @TargetApi(Build.VERSION_CODES.M)
+
     public InfiniteCycleScroller(final Context context, final Interpolator interpolator, final boolean flywheel) {
         super(context, interpolator, flywheel);
     }

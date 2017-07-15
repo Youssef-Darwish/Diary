@@ -1,8 +1,6 @@
 package com.gigamole.infinitecycleviewpager;
 
-import android.annotation.TargetApi;
 import android.content.Context;
-import android.os.Build;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
@@ -14,7 +12,6 @@ import android.view.animation.Interpolator;
 /**
  * Created by GIGAMOLE on 7/27/16.
  */
-@TargetApi(Build.VERSION_CODES.M)
 public class HorizontalInfiniteCycleViewPager extends ViewPager implements ViewPageable {
 
     private InfiniteCycleManager mInfiniteCycleManager;
