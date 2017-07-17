@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import com.gigamole.sample.R;
 import com.gigamole.sample.utils.Utils;
-
+import com.gigamole.sample.data.Entry;
 import java.util.ArrayList;
 
 import static com.gigamole.sample.utils.Utils.setupItem;
@@ -20,13 +20,13 @@ import static com.gigamole.sample.utils.Utils.setupItem;
 public class HorizontalPagerAdapter extends PagerAdapter {
 
     private static HorizontalPagerAdapter pagerAdapter = null;
-    public final ArrayList<Utils.LibraryObject> LIBRARIES;
+    public final ArrayList<Entry> entryArrayList;
 
     private Context mContext;
     private LayoutInflater mLayoutInflater;
 
     private HorizontalPagerAdapter(final Context context) {
-        LIBRARIES = new ArrayList<>();
+        entryArrayList = new ArrayList<Entry>();
         mContext = context;
         mLayoutInflater = LayoutInflater.from(context);
 
@@ -41,7 +41,7 @@ public class HorizontalPagerAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return LIBRARIES.size();
+        return entryArrayList.size();
     }
 
     @Override
@@ -54,7 +54,7 @@ public class HorizontalPagerAdapter extends PagerAdapter {
         final View view;
 
             view = mLayoutInflater.inflate(R.layout.item, container, false);
-            setupItem(view, LIBRARIES.get(position));
+            setupItem(view, entryArrayList.get(position));
 
 
         container.addView(view);

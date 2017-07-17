@@ -25,7 +25,7 @@ import android.widget.TextView;
 import com.gigamole.sample.R;
 import com.gigamole.sample.adapters.HorizontalPagerAdapter;
 import com.gigamole.sample.utils.Utils;
-
+import com.gigamole.sample.data.Entry;
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -34,9 +34,9 @@ import java.util.Date;
 
 public class card extends AppCompatActivity {
 
-    private Utils.LibraryObject obj;
+    private Entry  entry;
     private String textContent;
-    private Bitmap image ;
+    private byte [] image ;
     private String dateContent;
     private CollapsingToolbarLayout collapsingToolbar;
     private AppBarLayout appBar;
@@ -71,24 +71,17 @@ public class card extends AppCompatActivity {
                     BitmapDrawable drawable = (BitmapDrawable) I.getDrawable();
 
                     Bitmap bitmap = drawable.getBitmap();
-                    image = bitmap;
+
+
+                    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                    bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+                    image = baos.toByteArray();
 
                 }
 
-           /*     if(image == null) {
-                    ImageView I = (ImageView)findViewById(R.id.img);
-                    I.buildDrawingCache();
-                    I.setDrawingCacheEnabled(true);
-                    view.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
-                            View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
-                    view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
-                    Bitmap scaledBitmap = I.getDrawingCache();
-                    image = scaledBitmap;
-                }
-*/
                 if(!textContent.matches("")) {
-                    obj = new Utils.LibraryObject(textContent,image,dateContent);
-                    HorizontalPagerAdapter.getInstance(getApplicationContext()).LIBRARIES.add(obj);
+                    entry = new Entry(textContent,dateContent,image);
+                    HorizontalPagerAdapter.getInstance(getApplicationContext()).entryArrayList.add(entry);
                     HorizontalPagerAdapter.getInstance(getApplicationContext()).notifyDataSetChanged();
                 }
 
@@ -139,11 +132,11 @@ public class card extends AppCompatActivity {
                         InputStream inputStream = cr.openInputStream(selectedImage);
                         bitmap = BitmapFactory.decodeStream(inputStream);
                         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                        //   bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
-                        // data = baos.toByteArray();
+                        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+                        image = baos.toByteArray();
                         ImageView img = (ImageView) findViewById(R.id.img);
                         img.setImageBitmap(bitmap);
-                        image = bitmap;
+
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
