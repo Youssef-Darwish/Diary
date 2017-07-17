@@ -8,12 +8,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import com.gigamole.sample.adapters.HorizontalPagerAdapter;
 import com.gigamole.navigationtabstrip.NavigationTabStrip;
 import com.gigamole.sample.R;
 import com.gigamole.sample.adapters.MainPagerAdapter;
+import com.gigamole.sample.data.DiaryDataSource;
+
+
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

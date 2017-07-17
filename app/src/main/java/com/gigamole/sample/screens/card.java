@@ -31,7 +31,8 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.text.DateFormat;
 import java.util.Date;
-
+import com.gigamole.sample.screens.MainActivity;
+import com.gigamole.sample.data.DiaryDataSource;
 public class card extends AppCompatActivity {
 
     private Entry  entry;
@@ -44,6 +45,7 @@ public class card extends AppCompatActivity {
     private int day;
     private int month;
     private int year;
+
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -78,11 +80,14 @@ public class card extends AppCompatActivity {
                     image = baos.toByteArray();
 
                 }
+                // description is not added yet
 
                 if(!textContent.matches("")) {
-                    entry = new Entry(textContent,dateContent,image);
+                    entry = new Entry(textContent,"",dateContent,image);
                     HorizontalPagerAdapter.getInstance(getApplicationContext()).entryArrayList.add(entry);
+                    HorizontalPagerAdapter.getInstance(getApplicationContext()).mDataSource.addEntry(entry);
                     HorizontalPagerAdapter.getInstance(getApplicationContext()).notifyDataSetChanged();
+
                 }
 
             }

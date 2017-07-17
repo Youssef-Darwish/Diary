@@ -32,6 +32,13 @@ public class Entry {
         this.image = null;
         // check what is the default value of Blob data type in SQLite
     }
+    public Entry (String title, String description,String date, byte [] image ){
+
+        this.date = date;
+        this.description = description;
+        this.title = title;
+        this.image = image;
+    }
 
     public void setEntryTitle(String title){
         this.title = title;

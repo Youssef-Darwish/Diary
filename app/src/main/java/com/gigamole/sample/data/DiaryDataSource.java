@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.gigamole.sample.data.DiaryContract.DiaryEntry;
 
@@ -21,7 +22,7 @@ public class DiaryDataSource {
             DiaryEntry.COLUMN_ENTRY_DESCRIPTION, DiaryEntry.COLUMMN_ENTRY_DATE
             , DiaryEntry.COLUMN_ENTRY_IMAGE};
 
-    public DiaryDataSource (Context context) {
+    public DiaryDataSource(Context context) {
         dbHelper = new DiaryDbHelper(context);
     }
 
@@ -29,38 +30,40 @@ public class DiaryDataSource {
         database = dbHelper.getWritableDatabase();
 
     }
-    public void close(){
+
+    public void close() {
         database.close();
     }
 
-    public void addEntry(Entry newEntry){
+    public void addEntry(Entry newEntry) {
         ContentValues values = new ContentValues();
-        values.put(DiaryEntry.COLUMN_ENTRY_TITLE,newEntry.getEntryTitle());
-        values.put(DiaryEntry.COLUMN_ENTRY_DESCRIPTION,newEntry.getEntryDescription() );
-        values.put(DiaryEntry.COLUMMN_ENTRY_DATE,newEntry.getDate());
-        values.put(DiaryEntry.COLUMN_ENTRY_IMAGE,newEntry.getEntryImage());
+        values.put(DiaryEntry.COLUMN_ENTRY_TITLE, newEntry.getEntryTitle());
+        values.put(DiaryEntry.COLUMN_ENTRY_DESCRIPTION, newEntry.getEntryDescription());
+        values.put(DiaryEntry.COLUMMN_ENTRY_DATE, newEntry.getDate());
+        values.put(DiaryEntry.COLUMN_ENTRY_IMAGE, newEntry.getEntryImage());
 
-        database.insert(DiaryEntry.TABLE_NAME,null,values);
+        database.insert(DiaryEntry.TABLE_NAME, null, values);
+        Log.d("Db operations", "entry inserted");
     }
 
-    public void deleteEntry(Entry EntryToBeDeleted){
+    public void deleteEntry(Entry EntryToBeDeleted) {
         String title = EntryToBeDeleted.getEntryTitle();
         database.delete(DiaryEntry.TABLE_NAME
-                , DiaryEntry.COLUMN_ENTRY_TITLE + " = " + title,null);
+                , DiaryEntry.COLUMN_ENTRY_TITLE + " = " + title, null);
 
     }
 
-    public void updateEntry(Entry oldEntry, Entry newEntry){
+    public void updateEntry(Entry oldEntry, Entry newEntry) {
 
         ContentValues values = new ContentValues();
-        values.put(DiaryEntry.COLUMN_ENTRY_TITLE,newEntry.getEntryTitle());
-        values.put(DiaryEntry.COLUMN_ENTRY_DESCRIPTION,newEntry.getEntryDescription() );
-        values.put(DiaryEntry.COLUMMN_ENTRY_DATE,newEntry.getDate());
-        values.put(DiaryEntry.COLUMN_ENTRY_IMAGE,newEntry.getEntryImage());
+        values.put(DiaryEntry.COLUMN_ENTRY_TITLE, newEntry.getEntryTitle());
+        values.put(DiaryEntry.COLUMN_ENTRY_DESCRIPTION, newEntry.getEntryDescription());
+        values.put(DiaryEntry.COLUMMN_ENTRY_DATE, newEntry.getDate());
+        values.put(DiaryEntry.COLUMN_ENTRY_IMAGE, newEntry.getEntryImage());
 
         database.update(DiaryEntry.TABLE_NAME,
                 values, DiaryEntry.COLUMN_ENTRY_TITLE + " = " +
-                        oldEntry.getEntryTitle(),null);
+                        oldEntry.getEntryTitle(), null);
 
 
     }
@@ -69,21 +72,26 @@ public class DiaryDataSource {
     // what else ??
     // select operations?
 
-    public List<Entry> getAllEntries(){
-        List<Entry> entries = new ArrayList<Entry>();
-        Cursor cursor = database.query(DiaryEntry.TABLE_NAME,allColumns,null,null,null,null,null);
-        while (!cursor.isAfterLast()){
-            Entry temp = cursorToEntry(cursor);
-            entries.add(temp);
-            cursor.moveToNext();
+    public ArrayList<Entry> getAllEntries() {
+        ArrayList<Entry> entries = new ArrayList<Entry>();
+        Cursor cursor = database.query(DiaryEntry.TABLE_NAME, allColumns, null, null, null, null, null);
+        if (cursor == null) {
+
+            Log.d("debug Cursor", "can be created");
+            while (!cursor.isAfterLast()) {
+                Entry temp = cursorToEntry(cursor);
+                entries.add(temp);
+                cursor.moveToNext();
+            }
         }
+
 
         return entries;
     }
 
-    private Entry cursorToEntry(Cursor cursor){
+    private Entry cursorToEntry(Cursor cursor) {
 
-        Entry entryToReturn  = new Entry();
+        Entry entryToReturn = new Entry();
         entryToReturn.setEntryTitle(cursor.getString(1));
         entryToReturn.setEntryDescription(cursor.getString(2));
         entryToReturn.setDate(cursor.getString(3));
