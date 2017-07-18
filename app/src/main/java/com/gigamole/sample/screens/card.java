@@ -1,4 +1,5 @@
 package com.gigamole.sample.screens;
+
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.ContentResolver;
@@ -26,18 +27,21 @@ import com.gigamole.sample.R;
 import com.gigamole.sample.adapters.HorizontalPagerAdapter;
 import com.gigamole.sample.utils.Utils;
 import com.gigamole.sample.data.Entry;
+
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.text.DateFormat;
 import java.util.Date;
+
 import com.gigamole.sample.screens.MainActivity;
 import com.gigamole.sample.data.DiaryDataSource;
+
 public class card extends AppCompatActivity {
 
-    private Entry  entry;
+    private Entry entry;
     private String textContent;
-    private byte [] image ;
+    private byte[] image;
     private String dateContent;
     private CollapsingToolbarLayout collapsingToolbar;
     private AppBarLayout appBar;
@@ -57,7 +61,7 @@ public class card extends AppCompatActivity {
         java.text.DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(getApplicationContext());
         dateContent = dateFormat.format(new Date());
 
-     //   dateContent = DateFormat.getDateInstance().format( new Date());
+        //   dateContent = DateFormat.getDateInstance().format( new Date());
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -65,10 +69,10 @@ public class card extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textContent = ((EditText)findViewById(R.id.textTitle)).getText().toString();
+                textContent = ((EditText) findViewById(R.id.textTitle)).getText().toString();
                 finish();
 
-                if (image == null){
+                if (image == null) {
                     ImageView I = (ImageView) findViewById(R.id.img);
                     BitmapDrawable drawable = (BitmapDrawable) I.getDrawable();
 
@@ -82,10 +86,16 @@ public class card extends AppCompatActivity {
                 }
                 // description is not added yet
 
-                if(!textContent.matches("")) {
-                    entry = new Entry(textContent,"",dateContent,image);
+                if (!textContent.matches("")) {
+                    entry = new Entry(textContent,"", dateContent,image);
+                    System.out.println(entry.getDate());
+                    System.out.println(entry.getEntryDescription());
+                    System.out.println(entry.getEntryTitle());
+                    System.out.println(entry.getEntryImage().toString());
                     HorizontalPagerAdapter.getInstance(getApplicationContext()).entryArrayList.add(entry);
                     HorizontalPagerAdapter.getInstance(getApplicationContext()).mDataSource.addEntry(entry);
+                    System.out.println(HorizontalPagerAdapter.
+                            getInstance(getApplicationContext()).entryArrayList.size());
                     HorizontalPagerAdapter.getInstance(getApplicationContext()).notifyDataSetChanged();
 
                 }
@@ -106,14 +116,14 @@ public class card extends AppCompatActivity {
         AppBarLayout.OnOffsetChangedListener mListener = new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                if(collapsingToolbar.getHeight() + verticalOffset < 2 * ViewCompat.getMinimumHeight(collapsingToolbar)) {
-                        text = (EditText) findViewById(R.id.textTitle);
-                        text.setVisibility(View.INVISIBLE);
-                        collapsingToolbar.setTitle(text.getText().toString());
+                if (collapsingToolbar.getHeight() + verticalOffset < 2 * ViewCompat.getMinimumHeight(collapsingToolbar)) {
+                    text = (EditText) findViewById(R.id.textTitle);
+                    text.setVisibility(View.INVISIBLE);
+                    collapsingToolbar.setTitle(text.getText().toString());
                 } else {
-                       text = (EditText) findViewById(R.id.textTitle);
-                       text.setVisibility(View.VISIBLE);
-                       collapsingToolbar.setTitle("");
+                    text = (EditText) findViewById(R.id.textTitle);
+                    text.setVisibility(View.VISIBLE);
+                    collapsingToolbar.setTitle("");
                 }
             }
         };
@@ -122,14 +132,13 @@ public class card extends AppCompatActivity {
 
     }
 
-    protected void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         Bitmap bitmap;
-        switch(requestCode) {
+        switch (requestCode) {
             case 1234:
-                if(resultCode == RESULT_OK){
+                if (resultCode == RESULT_OK) {
                     Uri selectedImage = data.getData();
 
                     try {
@@ -149,7 +158,9 @@ public class card extends AppCompatActivity {
                 }
         }
 
-    };
+    }
+
+    ;
 
     @Override
     protected Dialog onCreateDialog(int id) {
@@ -179,7 +190,7 @@ public class card extends AppCompatActivity {
     };
 
     public void setDate(View view) {
-         showDialog(R.id.Date);
+        showDialog(R.id.Date);
     }
 
 

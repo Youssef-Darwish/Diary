@@ -75,11 +75,22 @@ public class DiaryDataSource {
     public ArrayList<Entry> getAllEntries() {
         ArrayList<Entry> entries = new ArrayList<Entry>();
         Cursor cursor = database.query(DiaryEntry.TABLE_NAME, allColumns, null, null, null, null, null);
-        if (cursor == null) {
 
+
+        cursor.moveToFirst();
+        Log.d("cursor data",cursor.getString(1));
+        if (cursor.getCount() >1) {
+            Log.d("debug Cursor", String.valueOf(cursor.getCount()));
             Log.d("debug Cursor", "can be created");
+            cursor.moveToFirst();
             while (!cursor.isAfterLast()) {
-                Entry temp = cursorToEntry(cursor);
+
+                Entry temp = new Entry();
+                temp.setEntryTitle(cursor.getString(1));
+                temp.setEntryDescription(cursor.getString(2));
+                temp.setDate(cursor.getString(3));
+                temp.setEntryImage(cursor.getBlob(4));
+
                 entries.add(temp);
                 cursor.moveToNext();
             }
@@ -92,11 +103,12 @@ public class DiaryDataSource {
     private Entry cursorToEntry(Cursor cursor) {
 
         Entry entryToReturn = new Entry();
-        entryToReturn.setEntryTitle(cursor.getString(1));
-        entryToReturn.setEntryDescription(cursor.getString(2));
-        entryToReturn.setDate(cursor.getString(3));
-        entryToReturn.setEntryImage(cursor.getBlob(4));
+        entryToReturn.setEntryTitle(cursor.getString(0));
+        entryToReturn.setEntryDescription(cursor.getString(1));
+        entryToReturn.setDate(cursor.getString(2));
+        entryToReturn.setEntryImage(cursor.getBlob(3));
 
         return entryToReturn;
     }
 }
+

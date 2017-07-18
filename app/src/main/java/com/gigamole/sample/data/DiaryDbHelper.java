@@ -16,7 +16,7 @@ public class DiaryDbHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "diary.db";
 
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 7;
 
     public DiaryDbHelper(Context context){
         super(context,DATABASE_NAME,null,DATABASE_VERSION);
@@ -30,7 +30,7 @@ public class DiaryDbHelper extends SQLiteOpenHelper {
                 DiaryEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "+
                 DiaryEntry.COLUMN_ENTRY_TITLE + " TEXT NOT NULL," +
                 DiaryEntry.COLUMN_ENTRY_DESCRIPTION + " TEXT NOT NULL," +
-                DiaryEntry.COLUMMN_ENTRY_DATE + " TIMESTAMP DEFAULT TIMESTAMP ," +
+                DiaryEntry.COLUMMN_ENTRY_DATE + " TIMESTAMP DEFAULT TIMESTAMP,  " +
                 DiaryEntry.COLUMN_ENTRY_IMAGE + " Blob " +
                 ");" ;
 
