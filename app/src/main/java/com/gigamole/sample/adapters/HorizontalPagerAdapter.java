@@ -34,8 +34,8 @@ public class HorizontalPagerAdapter extends PagerAdapter {
         mDataSource = new DiaryDataSource(context);
         mDataSource.open();
 
-       // entryArrayList = new ArrayList<>();
-       entryArrayList = mDataSource.getAllEntries();
+        entryArrayList = new ArrayList<>();
+       //entryArrayList = mDataSource.getAllEntries();
         Log.d("values in adapter",String.valueOf(entryArrayList.size()));
         mContext = context;
         mLayoutInflater = LayoutInflater.from(context);
@@ -65,8 +65,8 @@ public class HorizontalPagerAdapter extends PagerAdapter {
 
             view = mLayoutInflater.inflate(R.layout.item, container, false);
             setupItem(view, entryArrayList.get(position));
-
-
+            view.setTag(entryArrayList.get(position).getEntryTitle());
+            Log.d("HPagerAdapter",entryArrayList.get(position).getEntryTitle());
         container.addView(view);
         return view;
     }

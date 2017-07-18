@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.Image;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,6 +29,9 @@ public class Utils {
 
         final TextView text = (TextView) view.findViewById(R.id.txt_date);
         text.setText(entry.getDate());
+
+      //  view.setTag(entry.getEntryTitle());
+        //Log.d("in Util class",entry.getEntryTitle());
 
     }
 

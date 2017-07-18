@@ -110,5 +110,12 @@ public class DiaryDataSource {
 
         return entryToReturn;
     }
+
+    public Cursor selectEntry(String entryTitle){
+
+        Log.d("selectEntry",entryTitle);
+        return database.query(DiaryEntry.TABLE_NAME,allColumns,
+                DiaryEntry.COLUMN_ENTRY_TITLE + " = " + entryTitle,null,null,null,null );
+    }
 }
 
